@@ -1,14 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { Contact } from "../interface/Contact";
-import axios from "axios";
-import {
-  createContactsResponse,
-  getContactsResponse,
-} from "../interface/ApiResponse";
+import React, { useState } from "react";
 
 interface DirectoryFormProps {
   handleAddUser: (name: string, phone: number) => void;
 }
+
 const DirectoryForm: React.FC<DirectoryFormProps> = ({ handleAddUser }) => {
   const [name, setName] = useState<string>("");
   const [phone, setPhone] = useState<number>(0);
